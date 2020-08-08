@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/menu"><i class="fa fa-home"></i> Menu</a> <a class="btn btn-secondary" href="/customerPO"><i class="fa fa-plus"></i> Create New</a> CustomerPO List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>CustomerPO</th>
+            {{!-- <th>Email</th> --}}
+            <th>Price</th>
+            <th>Deliverables Type</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            {{!-- <td>{{this.email}}</td> --}}
+            <td>{{this.price}}</td>
+            <td>{{this.dType}}</td>
+            <td>
+                <a href="/customerPO/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/customerPO/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/customerPO" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{customerPO._id}}">
+    <div class="form-group">
+        <label>Customer PO</label>
+        <input type="number" class="form-control" name="fullName" placeholder="Customer PO" value="{{customerPO.fullName}}">
+        <div class="number-danger">
+            {{customerPO.fullNameError}}</div>
+    </div>
+    {{!-- <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{customerPO.email}}">
+        <div class="text-danger">
+            {{customerPO.emailError}}</div>
+    </div> --}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Price</label>
+            <input type="number" class="form-control" name="price" placeholder="Price" value="{{customerPO.price}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Deliverables Type</label>
+            <input type="text" class="form-control" name="dType" placeholder="Deliverables Type" value="{{customerPO.dType}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/customerPO/list"><i class="fa fa-list-alt"></i> View All</a>
+        <a class="btn btn-secondary" href="/menu"><i class="fa fa-home"></i> Menu</a>
+    </div>
+</form>

@@ -1,0 +1,34 @@
+<h3><a class="btn btn-secondary" href="/menu"><i class="fa fa-home"></i> Menu</a> <a class="btn btn-secondary" href="/deliverables"><i class="fa fa-plus"></i> Create New</a> Deliverables List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>DeliverablesID</th>
+            <th>CustomerPO</th>
+            <th>SiteID</th>
+            {{!-- <th>Email</th> --}}
+            <th>Site Name</th>
+            <th>Deliverables Type</th>
+            <th>Installation Start</th>
+            <th>Installation Finish</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.deliverablesID}}</td>
+            <td>{{this.customerPO}}</td>
+            <td>{{this.siteID}}</td>
+            {{!-- <td>{{this.email}}</td> --}}
+            <td>{{this.siteName}}</td>
+            <td>{{this.dType}}</td>
+            <td>{{this.install}}</td>
+            <td>{{this.finish}}</td>
+            <td>
+                <a href="/deliverables/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/deliverables/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

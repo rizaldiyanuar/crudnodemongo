@@ -1,0 +1,52 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/deliverables" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{site._id}}">
+    <div class="form-group">
+        <label>Deliverables ID</label>
+        <input type="text" class="form-control" name="deliverablesID" placeholder="Deliverables ID" value="{{deliverables.deliverablesID}}">
+        <div class="text-danger">
+            {{deliverables.deliverablesIDError}}</div>
+    </div>
+    {{!-- <div class="form-group">
+        <label>CustomerPO</label>
+        <input type="number" class="form-control" name="customerPO" placeholder="Customer PO" value="{{deliverables.customerPO}}">
+        <div class="number-danger">
+            {{deliverables.customerPO}}</div>
+    </div>
+    <div class="form-group">
+        <label>SiteID</label>
+        <input type="text" class="form-control" name="siteID" placeholder="Site ID" value="{{deliverables.siteID}}">
+        <div class="text-danger">
+            {{deliverables.siteID}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{customerPO.email}}">
+        <div class="text-danger">
+            {{customerPO.emailError}}</div>
+    </div> --}}
+    <div class="form-row">
+        {{!-- <div class="form-group col-md-6">
+            <label>Site Name</label>
+            <input type="text" class="form-control" name="siteName" placeholder="Site Name" value="{{deliverables.siteName}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Deliverable Type</label>
+            <input type="text" class="form-control" name="dType" placeholder="Deliverable Type" value="{{deliverables.dType}}">
+        </div> --}}
+        <div class="form-group col-md-6">
+            <label>Installation Start</label>
+            <input type="date" class="form-control" name="install" placeholder="Install" value="{{deliverables.install}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Installation Finish</label>
+            <input type="date" class="form-control" name="finish" placeholder="Finish" value="{{deliverables.finish}}">
+        </div>
+    </div>
+    <div class="form-group">
+        {{!-- <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button> --}}
+        <a class="btn btn-secondary" href="/deliverables/list"><i class="fa fa-list-alt"></i> View All</a>
+        <a class="btn btn-secondary" href="/menu"><i class="fa fa-home"></i> Menu</a>
+    </div>
+</form>
